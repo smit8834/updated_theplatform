@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400;500&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+.container {
+  /* margin-top: 5%; */
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  /* text-align: center; */
+  left: 50%;
+}
+
+
+.output {
+  text-align:center;
+  font-family: 'Baloo Bhai 2', cursive;
+  color:#7ed957;
+  /* text-shadow: 0px 0px 10px #464444, 0px 0px 10px #413f3f; */
+  text-shadow:0px 0px 10px #464444, 0px 0px 10px #413f3f;
+
+}
+
+/* Cursor Styling */
+
+.cursor::after {
+  content:'';
+  display:inline-block;
+  margin-left:3px;
+  background-color:transparent;
+  animation-name:blink;
+  animation-duration:0.5s;
+  animation-iteration-count: infinite;
+}
+
+.carousel-img-set {
+  height: 600px;
+  background: url('homebg2.png') no-repeat center center;
+  background-size: 100% 100%;
+  max-width: 100%;
+  /* height: auto; */
+  max-height: 400px;
+  min-width: 70px;
+  margin-right: 0px;
+}
+
+@media screen and (max-width:800px) {
+  .carousel-img-set {
+    height: 450px;
+  }
+}
+@media screen and (max-width:693px) {
+  .carousel-img-set {
+    height: 337px;
+  }
+ 
+}
+
+@media screen and (max-width:466px) {
+  .carousel-img-set {
+    height: 262px;
+  }
+     
+
+}
+@media screen and (max-width:350px) {
+  .carousel-img-set {
+    width: 402px;
+    height: 184px;
+  }
+  
+}
+
+@media screen and (max-width:300px) {
+  .carousel-img-set {
+    width: 400px;
+    height: 184px;
+  }
+     
+
+}
+
+@media screen and (max-width:290px) {
+  .carousel-img-set {
+    width: 400px;
+    height: 184px;
+  }
+  .agree_label{
+    font-size: 12px;
+  }
+  .sub{
+    margin-left: 2.2rem;
+  }
+}
+@media screen and (max-width:260px) {
+  .carousel-img-set {
+    width: 400px;
+    height: 184px;
+  }
+  .sub{
+    margin-left: 2.4rem;
+  }
+
+}

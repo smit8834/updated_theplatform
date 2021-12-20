@@ -1,0 +1,138 @@
+{% load static %}
+<!DOCTYPE html>
+<html class="no-js" lang="en" data-theme="light">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Connections</title>
+    <meta name="description" content="Arion — This is the best dashboard" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="application-name" content="Arion — This is the best dashboard" />
+    <meta name="apple-mobile-web-app-title" content="Arion Admin Dashboard" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <link rel="stylesheet" href="{% static 'css_d/bootstrap.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'css_d/apexcharts.css' %}" />
+    <link rel="stylesheet" href="{% static 'css_d/tippy/tippy.css' %}" />
+    <link rel="stylesheet" href="{% static 'css_d/flatpickr.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'css_d/select2.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'css_d/quill/quill.snow.css' %}" />
+    <link rel="stylesheet" href="{% static 'css_d/quill/quill.core.css' %}" />
+    <link rel="stylesheet" href="{% static 'css_d/filepond.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'css_d/filepond-plugin-image-preview.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'css_d/swiper-bundle.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'css_d/style.css' %}" />
+    <link rel="apple-touch-icon" sizes="57x57" href="img/content/favicons/apple-icon-57x57.png' %}" />
+    <link rel="apple-touch-icon" sizes="60x60" href="img/content/favicons/apple-icon-60x60.png' %}" />
+    <link rel="apple-touch-icon" sizes="72x72" href="img/content/favicons/apple-icon-72x72.png' %}" />
+    <link rel="apple-touch-icon" sizes="76x76" href="img/content/favicons/apple-icon-76x76.png' %}" />
+    <link rel="apple-touch-icon" sizes="114x114" href="img/content/favicons/apple-icon-114x114.png' %}" />
+    <link rel="apple-touch-icon" sizes="120x120" href="img/content/favicons/apple-icon-120x120.png' %}" />
+    <link rel="apple-touch-icon" sizes="144x144" href="img/content/favicons/apple-icon-144x144.png' %}" />
+    <link rel="apple-touch-icon" sizes="152x152" href="img/content/favicons/apple-icon-152x152.png' %}" />
+    <link rel="apple-touch-icon" sizes="180x180" href="img/content/favicons/apple-icon-180x180.png' %}" />
+    <link rel="icon" type="image/png" sizes="192x192" href="img/content/favicons/android-icon-192x192.png' %}" />
+    <link rel="icon" type="image/png" sizes="32x32" href="img/content/favicons/favicon-32x32.png' %}" />
+    <link rel="icon" type="image/png" sizes="96x96" href="img/content/favicons/favicon-96x96.png' %}" />
+    <link rel="icon" type="image/png" sizes="16x16" href="img/content/favicons/favicon-16x16.png' %}" />
+    <!-- <link rel="manifest" href="img/content/favicons/manifest.json" />-->
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#ffffff" />
+</head><style>
+  .title{
+  position: absolute;
+  top: 100px;
+  right: 16px;
+  font-size: 30px;}
+</style>
+
+<body class="page-home">
+    <div class="page-wrapper">
+        <!-- ni -->
+        <main class="page-content">
+            <div class="container">
+                <div class="page-header">
+                    <h1 class="title">Users</h1><a class="page-header__title" href="/" target="_blank">Home Page</a>
+                    
+                </div>
+                <div class="page-tools">
+                    <div class="page-tools__right">
+                    </div>
+                </div>
+                <div class="toolbox">
+                    <div class="toolbox__row row gutter-bottom-xs">
+                        <div class="toolbox__left col-12 col-lg">
+                            <div class="toolbox__left-row row row--xs gutter-bottom-xs">
+                                <div class="form-group form-group--inline col-12 col-sm-auto d-none d-sm-block">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="toolbox__right col-12 col-lg-auto">
+                            <div class="toolbox__right-row row row--xs flex-nowrap">
+                                <div class="col col-lg-auto">
+                                    <form class="toolbox__search" method="GET" action = "{% url 'search_username' %}" autocomplete="on">
+                                      {% csrf_token %}
+                                        <div class="input-group input-group--white input-group--prepend">
+                                            <div class="input-group__prepend">
+                                                <svg class="icon-icon-search">
+                                                    <use xlink:href="#icon-search"></use>
+                                                </svg>
+                                            </div>
+                                            <input class="input" type="text" name= "query" placeholder="Search Here">
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="table-wrapper">
+                    <div class="table-wrapper__content table-collapse scrollbar-thin scrollbar-visible" data-simplebar>
+                        {% block content %}
+                        {% endblock %}
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- ni -->
+    </div>
+    <script src="{% static 'js_d/gsap/gsap.min.js' %}"></script>
+    <script src="{% static 'js_d/gsap/ScrollToPlugin.min.js' %}"></script>
+    <script src="{% static 'js_d/gsap/ScrollTrigger.min.js' %}"></script>
+    <script src="{% static 'js_d/vendor/popper.min.js' %}"></script>
+    <script src="{% static 'js_d/vendor/jquery.min.js' %}"></script>
+    <script src="{% static 'js_d/vendor/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'js_d/vendor/imagesloaded.pkgd.min.js' %}"></script>
+    <script src="{% static 'js_d/vendor/simplebar.min.js' %}"></script>
+    <script src="{% static 'js_d/vendor/tippy-bundle.umd.min.js' %}"></script>
+    <script src="{% static 'js_d/vendor/grid/masonry.pkgd.min.js' %}"></script>
+    <script src="{% static 'js_d/vendor/grid/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'js_d/vendor/charts/circle-progress.min.js' %}"></script>
+    <script src="{% static 'js_d/vendor/charts/echarts.common.min.js' %}"></script>
+    <script src="{% static 'js_d/vendor/charts/apexcharts/apexcharts.min.js' %}"></script>
+    <script src="{% static 'js_d/vendor/cleave/cleave.min.js' %}"></script>
+    <script src="{% static 'js_d/vendor/cleave/addons/cleave-phone.us.js' %}"></script>
+    <script src="{% static 'js_d/vendor/jqvmap/jquery.vmap.min.js' %}"></script>
+    <script src="{% static 'js_d/vendor/jqvmap/jquery.vmap.world.js' %}"></script>
+    <script src="{% static 'js_d/vendor/jqvmap/jquery.vmap.sampledata.js' %}"></script>
+    <script src="{% static 'js_d/vendor/jquery.star-rating-svg.min.js' %}"></script>
+    <script src="{% static 'js_d/vendor/calendar/flatpickr/flatpickr.min.js' %}"></script>
+    <script src="{% static 'js_d/vendor/calendar/flatpickr/en.js' %}"></script>
+    <script src="{% static 'js_d/vendor/select2.min.js' %}"></script>
+    <script src="{% static 'js_d/vendor/editors/quill.min.js' %}"></script>
+    <script src="{% static 'js_d/vendor/filepond/filepond-plugin-image-preview.min.js' %}"></script>
+    <script src="{% static 'js_d/vendor/filepond/filepond.min.js' %}"></script>
+    <script src="{% static 'js_d/vendor/swiper-bundle.min.js' %}"></script>
+    <script src="{% static 'js_d/vendor/scrollmagic/ScrollMagic.min.js' %}"></script>
+    <script src="{% static 'js_d/vendor/scrollmagic/debug.addIndicators.min.js' %}"></script>
+    <script src="{% static 'js_d/components.js' %}"></script>
+    <script src="{% static 'js_d/common.js' %}"></script>
+</body>
+
+</html>

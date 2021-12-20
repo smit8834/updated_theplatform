@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block content %}
+<table class="table table--lines">
+  <colgroup>
+      <col width="90px">
+      <col width="100px">
+      <col width="16%">
+      <col>
+      <col>
+      <col>
+      <col>
+      <col>
+  </colgroup>
+  <thead class="table__header">
+      <tr class="table__header-row">
+          <th class="d-none d-lg-table-cell"><span>Name</span>
+          </th>
+          <th class="table__th-sort"><span class="align-middle">Mobile Number</span>
+          <th class="table__th-sort"><span class="align-middle">Email</span>
+          </th>
+          <th class="table__actions"></th>
+      </tr>
+  </thead>
+  <tbody>
+    {% for result in displayusernames %}
+      <tr class="table__row">
+          <td class="d-none d-lg-table-cell table__td"><span >{{result.first_name}}</span>
+          </td>
+          <td class="table__td">{{result.username}}</td>
+          <td class="d-none d-sm-table-cell table__td"><span class="text-grey">{{result.email}}</span>
+          </td>
+          <td class="table__td">
+            <button type="submit" form="{{o.id}}" class="confirms"></button>
+
+            <button type="submit" form="{{o.id}}" class="reject" formaction=""></button>
+        </td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

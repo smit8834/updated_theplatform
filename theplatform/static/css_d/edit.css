@@ -1,0 +1,125 @@
+/* 
+.forget-pwd > a{
+    color: #e9e9e9;
+    font-weight: 500;
+}
+.forget-password .panel-default{
+    padding: 31%;
+    margin-top: -27%;
+}
+.forget-password .panel-body{
+    padding: 15%;
+    margin-bottom: -50%;
+    background: #fff;
+    border-radius: 5px;
+/* -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+}
+img{
+    width:40%;
+    margin-bottom:10%;
+}
+.btnForget{
+    background: #faf6f5;
+    border:none;
+}
+.forget-password .dropdown{
+    width: 100%;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+}
+.forget-password .dropdown button{
+    width: 100%;
+}
+.forget-password .dropdown ul{
+    width: 100%;
+/* }  */
+
+.col_img{
+    max-width: 46%;
+    max-height: 8%;
+    text-align: center;
+}
+.row_img{
+    text-align: center;
+    justify-content: center;
+    height: 200px;
+} 
+.jinn_pro{
+    height:200px;
+}
+.jinn_pic{
+    max-height: 200px;
+    width: auto;
+    height: auto;
+    max-width: 600px;
+
+}
+/* .col-form-label{
+    margin-left: 4%;
+}
+.col-form-label{
+    margin-right: -14%;
+} */
+/* .order-status{
+    width: fit-content;
+}
+.center_card{
+    justify-content: center;
+
+} */
+@media (max-width: 576px)
+{
+    .form-control{
+    margin-left: 7%;
+    width: 86%;
+    }
+    .form-control-file{
+        margin-left: 7%;
+        width: 86%;
+        }
+    
+
+}
+
+
+@media (max-width: 470px)
+{
+    .form-control{
+    margin-left: 8%;
+    width: 86%;
+    }
+    .form-control-file{
+        margin-left: 8%;
+        width: 86%;
+        }
+
+}
+
+
+
+@media (max-width: 280px)
+{
+    .form-control{
+    margin-left: 11%;
+    width: 74%;
+    }
+    .form-control-file{
+        margin-left: 11%;
+        width: 74%;
+        }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

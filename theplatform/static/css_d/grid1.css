@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400;500&display=swap');
+
+
+.badge{
+    justify-items: right;
+    font-size: 13px;
+    margin-right: 8px;
+}
+.price_rgt{
+    margin-right: 8px;
+}
+.Q_left{
+    margin-left: 8px;
+}
+@media (max-width: 320px){
+    
+.badge{
+    justify-items: right;
+    font-size: 13px;
+    margin-right: 0px;
+}
+.price_rgt{
+    margin-right: 0px;
+}
+.Q_left{
+    margin-left: 0px;
+}
+}
+.card-body{
+    font-family: 'Baloo Bhai 2', cursive;
+}
+.card-img-top{
+    height:50%;
+}
+.bbtn{
+width: 93px;
+    height: 35px;
+    border: none;
+    color: #24262b;
+    background-color: #7ed957;
+    border-radius: 4px;
+    box-shadow: inset 0 0 0 0 #7ed957;
+    transition: ease-out 0.3s;
+    font-size: 16px;
+    outline: none;
+    
+}
+.bbtn:hover{
+    box-shadow: inset 93px 0 0 0 #bbbbbb;
+    cursor: pointer;
+     color: #7ed957;;
+} 
+
+.bbtn_edit{
+    width: 73px;
+        height: 35px;
+        border: none;
+        color: #24262b;
+        background-color: #7ed957;
+        border-radius: 4px;
+        box-shadow: inset 0 0 0 0 #7ed957;
+        transition: ease-out 0.3s;
+        font-size: 16px;
+        outline: none;
+        
+    }
+    .bbtn_edit:hover{
+        box-shadow: inset 73px 0 0 0 #bbbbbb;
+        cursor: pointer;
+         color: #7ed957;;
+    } 
+
+@media (max-width: 320px){
+
+    .bbtn{
+        width: 73px;
+            height: 35px;
+            border: none;
+            border-radius: 4px;
+            transition: ease-out 0.3s;
+            font-size: 13px;
+            outline: none;
+            
+        }
+        .bbtn:hover{
+            box-shadow: inset 73px 0 0 0 #bbbbbb;
+            cursor: pointer;
+             color: #7ed957;;
+        } 
+        
+        .bbtn_edit{
+            width: 53px;
+                height: 35px;
+                border: none;
+                border-radius: 4px;
+                transition: ease-out 0.3s;
+                font-size: 13px;
+                outline: none;
+                
+            }
+            .bbtn_edit:hover{
+                box-shadow: inset 53px 0 0 0 #bbbbbb;
+                cursor: pointer;
+                 color: #7ed957;;
+            } 
+}
+
+ .col{
+    /* height: 50vh; */
+    width: auto;
+}
+.card{
+    width: 260px;
+}
+#price{
+float: left;
+}
+#st{
+    float: right;
+}
+/* @media (min-width: 576px){
+.card-group {
+    
+    padding-left: 39px;
+}
+
+}
+@media (max-width: 643px){
+    .card-group {
+        
+        padding-left: 19px;
+    }
+   
+    
+    }
+ @media (max-width: 618px){
+        .card-group {
+            
+            padding-left: 2px;
+        }
+       
+        
+        }  */
+        @media (max-width: 624px){
+.card-group {
+    padding-left: 2px;
+    display: grid;
+    justify-content: space-around;
+}
+        }
+
+        @media (max-width: 265px){
+            .card-group {
+                padding-left: 33px;
+                width: 220px;
+            }    }
+
+            .card::before {
+                position: absolute;
+                z-index: 1;
+                top: 0;
+                left: 0;
+                content: "";
+                width: 100%;
+                height: 100%;
+                background-color:transparent;
+      
+            }
+            .bg-success {
+                background-color: #28a745!important;
+                color: white;
+            }
+
+            @media (max-width: 280px){
+                .card-group {
+            
+                    padding-left: 2px;
+                }
+            }
